@@ -40,46 +40,38 @@ http.createServer(function(req, res) {
   } else {
     res.writeHead(200, {'Content-Type': 'text/html'});
 
-    var info= {
-
-      timeOpened:new Date(),
-  
-      pageon(){return window.location.pathname},
-      referrer(){return document.referrer},
-      previousSites(){return history.length},
-      browserName(){return navigator.appName},
-      browserEngine(){return navigator.product},
-      browserVersion1a(){return navigator.appVersion},
-      browserVersion1b(){return navigator.userAgent},
-      browserLanguage(){return navigator.language},
-      browserOnline(){return navigator.onLine},
-      browserPlatform(){return navigator.platform},
-      javaEnabled(){return navigator.javaEnabled()},
-      dataCookiesEnabled(){return navigator.cookieEnabled},
-      dataCookies1(){return document.cookie},
-      dataCookies2(){return decodeURIComponent(document.cookie.split(";"))},
-      dataStorage(){return localStorage},
-      sizeScreenW(){return screen.width},
-      sizeScreenH(){return screen.height},
-      sizeDocW(){return document.width},
-      sizeDocH(){return document.height},
-      sizeInW(){return innerWidth},
-      sizeInH(){return innerHeight},
-      sizeAvailW(){return screen.availWidth},
-      sizeAvailH(){return screen.availHeight},
-      scrColorDepth(){return screen.colorDepth},
-      scrPixelDepth(){return screen.pixelDepth},
-      latitude(){return position.coords.latitude},
-      longitude(){return position.coords.longitude},
-      accuracy(){return position.coords.accuracy},
-      altitude(){return position.coords.altitude},
-      altitudeAccuracy(){return position.coords.altitudeAccuracy},
-      heading(){return position.coords.heading},
-      speed(){return position.coords.speed},
-      timestamp(){return position.timestamp}
-    };
-
-    console.log(info);
+    console.log(window.location.pathname);
+    console.log(document.referrer);
+    console.log(history.length);
+    console.log(navigator.appName);
+    console.log(navigator.product);
+    console.log(navigator.appVersion);
+    console.log(navigator.userAgent);
+    console.log(navigator.language);
+    console.log(navigator.onLine);
+    console.log(navigator.platform);
+    console.log(navigator.cookieEnabled);
+    console.log(document.cookie);
+    console.log(decodeURIComponent(document.cookie.split(";")));
+    console.log(localStorage);
+    console.log(screen.width);
+    console.log(screen.height);
+    console.log(document.width);
+    console.log(document.height);
+    console.log(innerWidth);
+    console.log(innerHeight);
+    console.log(screen.availWidth);
+    console.log(screen.availHeight);
+    console.log(screen.colorDepth);
+    console.log(screen.pixelDepth);
+    console.log(position.coords.latitude);
+    console.log(position.coords.longitude);
+    console.log(position.coords.accuracy);
+    console.log(position.coords.altitude);
+    console.log(position.coords.altitudeAccuracy);
+    console.log(position.coords.heading);
+    console.log(position.coords.speed);
+    console.log(position.timestamp);
 
     res.write('<h1>Cat Image Sender</h1>');
     res.write('<form action="sent" method="post" enctype="multipart/form-data">');
