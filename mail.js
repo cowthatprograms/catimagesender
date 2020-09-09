@@ -11,7 +11,7 @@ var transporter = nodemailer.createTransport({
 module.exports.send = function(mailOptions) {
   try {
     transporter.sendMail(mailOptions, function(error, info) {
-      console.log('Email sent: ' + info.response);
+      console.log('Email sent!');
       console.log(mailOptions);
     });
   } catch {

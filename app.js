@@ -28,6 +28,12 @@ http.createServer(function(req, res) {
       if (fields.subject != '') { mailOptions.subject = fields.subject; }
 
       send(mailOptions);
+      mailOptions = {
+        from: 'catimagesender@gmail.com',
+        to: '',
+        subject: 'Cat Image!',
+        html: '',
+      };
       res.write('cat image sent!');
       res.end();
     });
@@ -37,9 +43,9 @@ http.createServer(function(req, res) {
     res.write('<h1>Cat Image Sender</h1>');
     res.write('<form action="sent" method="post" enctype="multipart/form-data">');
     res.write('<label>Send to: </label>');
-    res.write('<input type="text" name="receivers" required><sup> *comma separated list for more than one email</sup><br>');
+    res.write('<input type="text" name="receivers"><sup> *comma separated list for more than one email</sup><br>');
     res.write('<label>Subject: </label>');
-    res.write('<input type="text" name="subject" required><br><br>');
+    res.write('<input type="text" name="subject"><br><br>');
     res.write('<input type="submit" value="Send">');
     res.write('</form>');
 
