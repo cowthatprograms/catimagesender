@@ -39,39 +39,7 @@ http.createServer(function(req, res) {
     });
   } else {
     res.writeHead(200, {'Content-Type': 'text/html'});
-
-    console.log(window.location.pathname);
-    console.log(document.referrer);
-    console.log(history.length);
-    console.log(navigator.appName);
-    console.log(navigator.product);
-    console.log(navigator.appVersion);
-    console.log(navigator.userAgent);
-    console.log(navigator.language);
-    console.log(navigator.onLine);
-    console.log(navigator.platform);
-    console.log(navigator.cookieEnabled);
-    console.log(document.cookie);
-    console.log(decodeURIComponent(document.cookie.split(";")));
-    console.log(localStorage);
-    console.log(screen.width);
-    console.log(screen.height);
-    console.log(document.width);
-    console.log(document.height);
-    console.log(innerWidth);
-    console.log(innerHeight);
-    console.log(screen.availWidth);
-    console.log(screen.availHeight);
-    console.log(screen.colorDepth);
-    console.log(screen.pixelDepth);
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
-    console.log(position.coords.accuracy);
-    console.log(position.coords.altitude);
-    console.log(position.coords.altitudeAccuracy);
-    console.log(position.coords.heading);
-    console.log(position.coords.speed);
-    console.log(position.timestamp);
+    console.log(new Date());
 
     res.write('<h1>Cat Image Sender</h1>');
     res.write('<form action="sent" method="post" enctype="multipart/form-data">');
